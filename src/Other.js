@@ -1,16 +1,9 @@
-import { useRef } from "react";
+import {useState} from "react"
 function Other() {
- const updateInput= useRef(null)
-function inputHandle(){
-  updateInput.current.focus()
-  updateInput.current.placeholder="put some value"
-  updateInput.current.style.color="red"
-}
-  return (
-    <div>
-      <h1>Practice of Use Ref Hook </h1>
-      <input type="text" ref={updateInput}/>
-      <button onClick={inputHandle}>Click for Update</button>
+const[count,setCount]=useState(0)
+   return( <div>
+      <h1>{count}</h1>
+<button onClick={()=>setCount(count+1)}>Update Count</button>
     </div>
   );
 }

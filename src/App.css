@@ -1,7 +1,21 @@
 .App {
   text-align: center;
 }
-
+.primary{
+  width: 200px;
+ background-color: red;
+  border:5px solid black;
+}
+.secondary{
+  width: 200px;
+ background-color: yellow;
+  border:5px solid black;
+}
+.third{
+  width: 200px;
+ background-color: blue;
+  border:5px solid black;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
