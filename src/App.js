@@ -1,23 +1,21 @@
 import "./App.css";
-import Other from './Other';
+import React from "react";
+import Home from "./Home";
+import About from "./About";
+import Nav from "./Nav"
+import Errorpage from "./Errorpage"
+import { Routes, Route } from "react-router-dom";
 function App() {
-  
   return (
-    <div class="App">
-      <Other/>
-      <HOCRed cmp={Other}/>
-      <HOCYellow cmp={Other}/>
-      <HOCBlue cmp={Other}/>
+    <div className="App">
+      <Nav/>
+      <Routes>
+        <Route exact path="/about" element={<About />} />
+        <Route path="/" element={<Home />} />
+        <Route path="*" element={<Errorpage />} />
+      </Routes>
     </div>
   );
 }
-function HOCRed(props){
-  return (<div className="primary"><props.cmp/></div>)
-}
-function HOCYellow(props){
-  return (<div className="secondary"><props.cmp/></div>)
-}
-function HOCBlue(props){
-  return (<div className="third"><props.cmp/></div>)
-}
+
 export default App;
